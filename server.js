@@ -1,0 +1,5 @@
+const express=require("express");const cors=require("cors");require("dotenv").config();const app=express();app.use(cors({origin:process.env.FRONTEND_ORIGIN||"http://localhost:5173"}));app.use(express.json());
+const productRoutes=require("./routes/productRoutes");const inventoryRoutes=require("./routes/inventoryRoutes");const orderRoutes=require("./routes/orderRoutes");const customerRoutes=require("./routes/CustomerRoute");const authRoutes=require("./routes/authRoutes");const dashboardRoutes=require("./routes/dashboardRoutes");const auth=require("./middleware/auth");
+app.use("/api/auth",authRoutes);app.use("/api/dashboard",dashboardRoutes);app.use("/api/products",auth,productRoutes);app.use("/api/inventory",auth,inventoryRoutes);app.use("/api/orders",auth,orderRoutes);app.use("/api/customers",auth,customerRoutes);
+app.get("/",(req,res)=>res.json({message:"BizPilot Backend is running!"}));
+const PORT=5000;app.listen(PORT,()=>console.log(`BizPilot server running on http://localhost:${PORT}`));
