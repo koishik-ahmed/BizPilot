@@ -1,0 +1,891 @@
+/* =========================================================
+   BIZPILOT - REVENUE PAGE
+   Full CSS for current Revenue.jsx
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.revenue-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 28px 32px 50px;
+    box-sizing: border-box;
+
+    background: #f7f8fc;
+    color: #17233b;
+
+    font-family: Inter, Arial, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.revenue-page-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    flex-wrap: wrap;
+
+    margin-bottom: 22px;
+}
+
+.revenue-page-header h1 {
+    margin: 0 0 5px;
+
+    color: #17233b;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.revenue-page-header p {
+    margin: 0;
+
+    color: #8a96aa;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.revenue-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   PERIOD SELECTOR
+   Supports current JSX: .period-selector
+   Also supports .revenue-period-selector
+   ========================================================= */
+
+.period-selector,
+.revenue-period-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.period-selector button,
+.revenue-period-selector button {
+    height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dfe3ea;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #59667b;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.period-selector button:hover,
+.revenue-period-selector button:hover {
+    border-color: #6366f1;
+    color: #6366f1;
+}
+
+.period-selector button.active,
+.revenue-period-selector button.active {
+    background: #6366f1;
+    border-color: #6366f1;
+    color: #ffffff;
+}
+
+.period-selector button:active,
+.revenue-period-selector button:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+   ========================================================= */
+
+.revenue-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.revenue-stat-card {
+    min-height: 145px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e1e6ee;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 12px rgba(20, 30, 50, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.revenue-stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(20, 30, 50, 0.07);
+}
+
+
+/* =========================================================
+   STAT LABEL
+   ========================================================= */
+
+.revenue-stat-card .stat-label {
+    margin-bottom: 12px;
+
+    color: #66748a;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   STAT VALUE
+   ========================================================= */
+
+.revenue-stat-card .stat-value {
+    margin-bottom: 8px;
+
+    color: #17233b;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   STAT META
+   ========================================================= */
+
+.revenue-stat-card .stat-meta {
+    color: #8995a9;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   REVENUE PANEL
+   ========================================================= */
+
+.revenue-panel {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #e1e6ee;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(20, 30, 50, 0.035);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.revenue-panel .panel-header {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 26px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.revenue-panel .panel-header h2 {
+    margin: 0 0 5px;
+
+    color: #17233b;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.revenue-panel .panel-header p {
+    margin: 0;
+
+    color: #8a96aa;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CHART TOTAL
+   ========================================================= */
+
+.chart-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+.chart-total strong {
+    color: #17233b;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.chart-total span {
+    color: #929caf;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   REVENUE CHART
+   ========================================================= */
+
+.revenue-chart {
+    position: relative;
+
+    min-height: 280px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 10px;
+
+    padding: 25px 25px 20px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   CHART COLUMN
+   ========================================================= */
+
+.chart-column {
+    min-width: 60px;
+
+    flex: 1;
+
+    height: 235px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   CHART VALUE
+   ========================================================= */
+
+.chart-value {
+    margin-bottom: 6px;
+
+    color: #6366f1;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHART BAR
+   ========================================================= */
+
+.chart-bar {
+    width: 42px;
+
+    min-height: 3px;
+
+    border-radius:
+        7px 7px 2px 2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #6c6df4 0%,
+            #5146df 100%
+        );
+
+    transition:
+        width 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.chart-bar:hover {
+    width: 46px;
+}
+
+
+/* =========================================================
+   CHART LABEL
+   ========================================================= */
+
+.chart-label {
+    margin-top: 8px;
+
+    color: #8c97aa;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TWO COLUMN SECTION
+   ========================================================= */
+
+.revenue-two-column {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   REPORT LIST
+   ========================================================= */
+
+.report-list {
+    width: 100%;
+}
+
+
+/* =========================================================
+   REPORT ROW
+   ========================================================= */
+
+.report-row {
+    min-height: 82px;
+
+    display: grid;
+
+    grid-template-columns:
+        48px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 22px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.report-row:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   REPORT RANK
+   ========================================================= */
+
+.report-rank {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #efefff;
+
+    color: #6366f1;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   REPORT MAIN
+   ========================================================= */
+
+.report-main {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.report-main strong {
+    color: #24324a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.report-main span {
+    color: #8995a9;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   REPORT VALUE
+   ========================================================= */
+
+.report-value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 4px;
+}
+
+.report-value strong {
+    color: #24324a;
+
+    font-size: 14px;
+}
+
+.report-value span {
+    color: #8995a9;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.category-list {
+    padding: 20px 26px 24px;
+}
+
+.category-row {
+    margin-bottom: 18px;
+}
+
+.category-row:last-child {
+    margin-bottom: 0;
+}
+
+.category-heading {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+.category-heading strong,
+.category-heading span {
+    color: #344158;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.category-progress {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e8eaf0;
+}
+
+.category-progress-fill {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: #6366f1;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   PAYMENT SUMMARY
+   ========================================================= */
+
+.payment-summary-list {
+    padding: 20px 26px 24px;
+}
+
+.payment-summary-row {
+    display: grid;
+
+    grid-template-columns:
+        100px minmax(0, 1fr) 90px 45px;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+.payment-summary-row:last-child {
+    margin-bottom: 0;
+}
+
+.payment-summary-name {
+    color: #344158;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.payment-summary-bar {
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e8eaf0;
+}
+
+.payment-summary-bar div {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: #6366f1;
+
+    transition: width 0.4s ease;
+}
+
+.payment-summary-row strong {
+    color: #344158;
+
+    font-size: 12px;
+
+    text-align: right;
+}
+
+.payment-summary-row > span {
+    color: #8993a6;
+
+    font-size: 11px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   Scoped to Revenue page so App.css is not affected
+   ========================================================= */
+
+.revenue-page .empty-state {
+    width: 100%;
+
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    color: #929aaa;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.revenue-loading {
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8995a9;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.revenue-error {
+    padding: 35px;
+
+    border: 1px solid #eadede;
+    border-radius: 14px;
+
+    background: #fffafa;
+
+    color: #bd5555;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   GENERAL BUTTON FOR EXPORT
+   Current JSX uses inline styles, but this keeps it clean
+   ========================================================= */
+
+.revenue-page button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .revenue-summary-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .revenue-two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .revenue-page {
+        padding: 20px 16px 40px;
+    }
+
+
+    .revenue-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .revenue-header-actions {
+        width: 100%;
+    }
+
+
+    .period-selector,
+    .revenue-period-selector {
+        width: 100%;
+    }
+
+
+    .period-selector button,
+    .revenue-period-selector button {
+        flex: 1;
+
+        padding: 0 8px;
+    }
+
+
+    .revenue-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .revenue-chart {
+        min-height: 260px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .chart-column {
+        min-width: 55px;
+    }
+
+
+    .chart-bar {
+        width: 34px;
+    }
+
+
+    .chart-bar:hover {
+        width: 38px;
+    }
+
+
+    .revenue-panel .panel-header {
+        padding:
+            18px 18px;
+    }
+
+
+    .report-row {
+        grid-template-columns:
+            40px minmax(0, 1fr) auto;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .report-rank {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .payment-summary-list {
+        padding:
+            18px 18px 22px;
+    }
+
+
+    .payment-summary-row {
+        grid-template-columns:
+            75px minmax(0, 1fr) 80px;
+    }
+
+
+    .payment-summary-row > span {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .revenue-page-header h1 {
+        font-size: 25px;
+    }
+
+
+    .revenue-stat-card {
+        min-height: 130px;
+
+        padding: 18px;
+    }
+
+
+    .revenue-stat-card .stat-value {
+        font-size: 24px;
+    }
+
+
+    .revenue-panel .panel-header h2 {
+        font-size: 18px;
+    }
+
+
+    .report-row {
+        grid-template-columns:
+            36px minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .report-value {
+        grid-column: 2;
+        align-items: flex-start;
+    }
+}
