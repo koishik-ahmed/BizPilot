@@ -1,0 +1,3 @@
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
+export default function PublicFooter(){return <footer className="public-footer"><div className="footer-grid"><div><Logo/><p>One workspace for products, orders, inventory and business insights.</p></div><div><h4>Product</h4><Link to="/services">Services</Link><Link to="/login">Log in</Link><Link to="/signup">Sign up</Link></div><div><h4>Company</h4><Link to="/about">About us</Link><Link to="/contact">Contact</Link></div></div><div className="footer-bottom">© {new Date().getFullYear()} BizPilot. All rights reserved.</div></footer>}
