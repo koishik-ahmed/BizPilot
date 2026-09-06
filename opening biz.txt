@@ -1,0 +1,4 @@
+cd C:\Users\USER\Desktop\bizpilot\frontend
+npm run dev
+cd C:\Users\USER\Desktop\bizpilot\backend
+node server.js
