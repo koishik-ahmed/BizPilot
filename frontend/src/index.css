@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom modern scrollbar styled with emerald accent */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5ded5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1b6b55;
+}
+
+/* Pill active tabs styling */
+.pill-active {
+  @apply bg-brand-600 text-white shadow-md shadow-brand-600/20;
+}
+
+.pill-inactive {
+  @apply text-slate-600 hover:text-brand-700 hover:bg-brand-50;
+}
+
+/* Fix full-screen overlays (modals, drawers, backdrops):
+   Prevent any parent space-y-* or margin utilities from offsetting fixed elements from viewport edges */
+.fixed.inset-0,
+[class*="fixed"][class*="inset-0"] {
+  margin: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+/* Animated 3D Floating Orbs & Bubbles */
+@keyframes floatBubble1 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-22px) translateX(10px) scale(1.03);
+  }
+}
+
+@keyframes floatBubble2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(18px) translateX(-12px) scale(0.97);
+  }
+}
+
+@keyframes floatBubble3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) translateX(-8px) scale(1.02);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+.animate-bubble-1 {
+  animation: floatBubble1 7s ease-in-out infinite;
+}
+
+.animate-bubble-2 {
+  animation: floatBubble2 10s ease-in-out infinite;
+}
+
+.animate-bubble-3 {
+  animation: floatBubble3 8.5s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Private Workspace Interactive Animations & Polish */
+@keyframes pageSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-in {
+  animation: pageSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Interactive Card Elevation & Micro-Interactions */
+.interactive-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(12, 53, 42, 0.08);
+}
+
+.interactive-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-btn:hover {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.interactive-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Print optimization: clean report printout when browser print is invoked */
+@media print {
+  aside,
+  nav,
+  header,
+  .sidebar,
+  .topbar,
+  button,
+  .no-print,
+  [role="navigation"] {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .shadow-card,
+  .shadow-xl,
+  .shadow-2xl,
+  .shadow-md {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+}
+
+
+
